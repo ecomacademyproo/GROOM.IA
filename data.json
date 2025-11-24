@@ -1,0 +1,150 @@
+{
+  "categories": [
+    {
+      "id": "digitaux",
+      "nom": "Produits Digitaux",
+      "business": [
+        {
+          "nom": "Boost TikTok",
+          "conversion": 13,
+          "note": 8.5,
+          "demande": "Très élevée",
+          "budget": "Faible",
+          "difficulte": "Facile"
+        },
+        {
+          "nom": "Boost Telegram",
+          "conversion": 22,
+          "note": 9,
+          "demande": "Élevée",
+          "budget": "Faible",
+          "difficulte": "Très facile"
+        },
+        {
+          "nom": "Abonnements Netflix / Prime",
+          "conversion": 17,
+          "note": 8.5,
+          "demande": "Haute",
+          "budget": "Faible",
+          "difficulte": "Intermédiaire"
+        },
+        {
+          "nom": "Création de compte PayPal",
+          "conversion": 11,
+          "note": 8,
+          "demande": "Élevée",
+          "budget": "Très faible",
+          "difficulte": "Intermédiaire"
+        },
+        {
+          "nom": "Numéro virtuel",
+          "conversion": 14,
+          "note": 8.2,
+          "demande": "Haute",
+          "budget": "Faible",
+          "difficulte": "Facile"
+        },
+        {
+          "nom": "Bot Telegram",
+          "conversion": 6,
+          "note": 6,
+          "demande": "Moyenne",
+          "budget": "Moyen",
+          "difficulte": "Intermédiaire"
+        },
+        {
+          "nom": "Boutique Payhip",
+          "conversion": 9,
+          "note": 7,
+          "demande": "Bonne",
+          "budget": "Faible",
+          "difficulte": "Facile"
+        },
+        {
+          "nom": "Boutique Carrd",
+          "conversion": 8,
+          "note": 7,
+          "demande": "Bonne",
+          "budget": "Faible",
+          "difficulte": "Très facile"
+        }
+      ]
+    },
+    {
+      "id": "local",
+      "nom": "E-commerce & Dropshipping Local",
+      "business": [
+        {
+          "nom": "Vêtements locaux",
+          "conversion": 4,
+          "note": 6.5,
+          "demande": "Très élevée",
+          "budget": "Faible",
+          "difficulte": "Facile"
+        },
+        {
+          "nom": "Parfums",
+          "conversion": 4,
+          "note": 7,
+          "demande": "Haute",
+          "budget": "Faible",
+          "difficulte": "Facile"
+        },
+        {
+          "nom": "Gadgets",
+          "conversion": 3,
+          "note": 6,
+          "demande": "Bonne",
+          "budget": "Très faible",
+          "difficulte": "Facile"
+        },
+        {
+          "nom": "Beauté & Minceur",
+          "conversion": 6,
+          "note": 8,
+          "demande": "Élevée",
+          "budget": "Faible",
+          "difficulte": "Facile"
+        }
+      ]
+    },
+    {
+      "id": "dropshipping",
+      "nom": "Dropshipping International",
+      "business": [
+        {
+          "nom": "Shopify mono-produit",
+          "conversion": 1.2,
+          "note": 6,
+          "demande": "Haute",
+          "budget": "Moyen",
+          "difficulte": "Intermédiaire"
+        },
+        {
+          "nom": "Shopify multi-produit",
+          "conversion": 0.9,
+          "note": 4.5,
+          "demande": "Moyenne",
+          "budget": "Moyen",
+          "difficulte": "Difficile"
+        },
+        {
+          "nom": "Produits tendance US/EU",
+          "conversion": 1.4,
+          "note": 6.5,
+          "demande": "Haute",
+          "budget": "Moyen",
+          "difficulte": "Expert"
+        },
+        {
+          "nom": "AliExpress",
+          "conversion": 0.8,
+          "note": 4,
+          "demande": "Moyenne",
+          "budget": "Faible",
+          "difficulte": "Intermédiaire"
+        }
+      ]
+    }
+  ]
+}
