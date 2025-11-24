@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenue dans GROOM™</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: Arial, sans-serif;
+        color: #bcdfff;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    /* Background lignes IA */
+    .matrix-bg {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+    }
+    .line {
+        position: absolute;
+        width: 2px;
+        background: rgba(0,150,255,0.4);
+        animation: drop 4s linear infinite;
+    }
+    @keyframes drop {
+        0% { transform: translateY(-120vh); opacity: 0; }
+        10% { opacity: 1; }
+        100% { transform: translateY(120vh); opacity: 0; }
+    }
+
+    /* Titre */
+    h1 {
+        margin-top: 160px;
+        font-size: 50px;
+        color: #4aa8ff;
+        text-shadow: 0 0 25px #4aa8ff, 0 0 45px #008cff;
+        animation: fadeIn 2s ease-out;
+    }
+
+    /* Texte IA */
+    .ia-text {
+        margin: 30px auto;
+        width: 85%;
+        max-width: 700px;
+        font-size: 16px;
+        opacity: 0;
+        animation: fadeIn 3s ease-out forwards 1.5s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bouton suivant */
+    .btn-next {
+        margin-top: 60px;
+        padding: 15px 40px;
+        font-size: 18px;
+        background: #009dff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 0 18px #009dff;
+        transition: 0.3s;
+    }
+    .btn-next:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px #00c3ff;
+    }
+</style>
+</head>
+<body>
+
+<!-- AUDIO AUTO PLAY -->
+<audio autoplay>
+  <source src="/mnt/data/3DD780FA-A348-4D9D-A73F-95574666EAF8.MP4" type="audio/mp4">
+</audio>
+
+<!-- Background lignes IA -->
+<div class="matrix-bg"></div>
+<script>
+    for (let i = 0; i < 20; i++) {
+        let line = document.createElement("div");
+        line.className = "line";
+        line.style.left = Math.random() * 100 + "%";
+        line.style.height = (100 + Math.random()*40) + "vh";
+        line.style.animationDelay = (Math.random()*5) + "s";
+        document.body.appendChild(line);
+    }
+</script>
+
+<!-- Contenu -->
+<h1>Bienvenue dans GROOM™</h1>
+
+<p class="ia-text">
+Initialisation du système GROOM…<br>
+Analyse Élít CSP en cours…<br>
+Chargement des modules d’observation comportementale…<br>
+Synchronisation avec l’écosystème GOOM™…<br><br>
+Votre interface IA est prête. Vous allez maintenant accéder à l’environnement intelligent conçu pour analyser, guider et transformer vos idées en business réels.<br><br>
+Appuyez sur SUIVANT pour continuer.
+</p>
+
+<button class="btn-next" onclick="window.location.href='page3.html'">SUIVANT →</button>
+
+</body>
+</html>
