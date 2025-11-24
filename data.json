@@ -1,150 +1,92 @@
-{
-  "categories": [
-    {
-      "id": "digitaux",
-      "nom": "Produits Digitaux",
-      "business": [
-        {
-          "nom": "Boost TikTok",
-          "conversion": 13,
-          "note": 8.5,
-          "demande": "Très élevée",
-          "budget": "Faible",
-          "difficulte": "Facile"
-        },
-        {
-          "nom": "Boost Telegram",
-          "conversion": 22,
-          "note": 9,
-          "demande": "Élevée",
-          "budget": "Faible",
-          "difficulte": "Très facile"
-        },
-        {
-          "nom": "Abonnements Netflix / Prime",
-          "conversion": 17,
-          "note": 8.5,
-          "demande": "Haute",
-          "budget": "Faible",
-          "difficulte": "Intermédiaire"
-        },
-        {
-          "nom": "Création de compte PayPal",
-          "conversion": 11,
-          "note": 8,
-          "demande": "Élevée",
-          "budget": "Très faible",
-          "difficulte": "Intermédiaire"
-        },
-        {
-          "nom": "Numéro virtuel",
-          "conversion": 14,
-          "note": 8.2,
-          "demande": "Haute",
-          "budget": "Faible",
-          "difficulte": "Facile"
-        },
-        {
-          "nom": "Bot Telegram",
-          "conversion": 6,
-          "note": 6,
-          "demande": "Moyenne",
-          "budget": "Moyen",
-          "difficulte": "Intermédiaire"
-        },
-        {
-          "nom": "Boutique Payhip",
-          "conversion": 9,
-          "note": 7,
-          "demande": "Bonne",
-          "budget": "Faible",
-          "difficulte": "Facile"
-        },
-        {
-          "nom": "Boutique Carrd",
-          "conversion": 8,
-          "note": 7,
-          "demande": "Bonne",
-          "budget": "Faible",
-          "difficulte": "Très facile"
-        }
-      ]
-    },
-    {
-      "id": "local",
-      "nom": "E-commerce & Dropshipping Local",
-      "business": [
-        {
-          "nom": "Vêtements locaux",
-          "conversion": 4,
-          "note": 6.5,
-          "demande": "Très élevée",
-          "budget": "Faible",
-          "difficulte": "Facile"
-        },
-        {
-          "nom": "Parfums",
-          "conversion": 4,
-          "note": 7,
-          "demande": "Haute",
-          "budget": "Faible",
-          "difficulte": "Facile"
-        },
-        {
-          "nom": "Gadgets",
-          "conversion": 3,
-          "note": 6,
-          "demande": "Bonne",
-          "budget": "Très faible",
-          "difficulte": "Facile"
-        },
-        {
-          "nom": "Beauté & Minceur",
-          "conversion": 6,
-          "note": 8,
-          "demande": "Élevée",
-          "budget": "Faible",
-          "difficulte": "Facile"
-        }
-      ]
-    },
-    {
-      "id": "dropshipping",
-      "nom": "Dropshipping International",
-      "business": [
-        {
-          "nom": "Shopify mono-produit",
-          "conversion": 1.2,
-          "note": 6,
-          "demande": "Haute",
-          "budget": "Moyen",
-          "difficulte": "Intermédiaire"
-        },
-        {
-          "nom": "Shopify multi-produit",
-          "conversion": 0.9,
-          "note": 4.5,
-          "demande": "Moyenne",
-          "budget": "Moyen",
-          "difficulte": "Difficile"
-        },
-        {
-          "nom": "Produits tendance US/EU",
-          "conversion": 1.4,
-          "note": 6.5,
-          "demande": "Haute",
-          "budget": "Moyen",
-          "difficulte": "Expert"
-        },
-        {
-          "nom": "AliExpress",
-          "conversion": 0.8,
-          "note": 4,
-          "demande": "Moyenne",
-          "budget": "Faible",
-          "difficulte": "Intermédiaire"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Boost TikTok",
+    "category": "Produits digitaux",
+    "conversion": 92,
+    "note": 4.7,
+    "demande": 95,
+    "estimation": "150 000–250 000 FCFA / mois"
+  },
+  {
+    "name": "Boost Telegram",
+    "category": "Produits digitaux",
+    "conversion": 89,
+    "note": 4.6,
+    "demande": 93,
+    "estimation": "120 000–230 000 FCFA / mois"
+  },
+  {
+    "name": "Abonnements",
+    "category": "Produits digitaux",
+    "conversion": 94,
+    "note": 4.8,
+    "demande": 97,
+    "estimation": "200 000–350 000 FCFA / mois"
+  },
+  {
+    "name": "Bots Telegram",
+    "category": "Produits digitaux",
+    "conversion": 87,
+    "note": 4.4,
+    "demande": 90,
+    "estimation": "150 000–300 000 FCFA / mois"
+  },
+  {
+    "name": "Payhip – Packs digitaux",
+    "category": "Produits digitaux",
+    "conversion": 86,
+    "note": 4.5,
+    "demande": 89,
+    "estimation": "120 000–200 000 FCFA / mois"
+  },
+  {
+    "name": "Carrd.co — Mini-sites",
+    "category": "Produits digitaux",
+    "conversion": 88,
+    "note": 4.5,
+    "demande": 90,
+    "estimation": "100 000–180 000 FCFA / mois"
+  },
+
+  {
+    "name": "Vêtements local",
+    "category": "E-commerce local",
+    "conversion": 84,
+    "note": 4.3,
+    "demande": 88,
+    "estimation": "150 000–300 000 FCFA / mois"
+  },
+  {
+    "name": "Parfums local",
+    "category": "E-commerce local",
+    "conversion": 82,
+    "note": 4.2,
+    "demande": 87,
+    "estimation": "130 000–260 000 FCFA / mois"
+  },
+  {
+    "name": "Beauté / Minceur",
+    "category": "E-commerce local",
+    "conversion": 90,
+    "note": 4.6,
+    "demande": 92,
+    "estimation": "160 000–280 000 FCFA / mois"
+  },
+  {
+    "name": "Gadgets / Accessoires",
+    "category": "E-commerce local",
+    "conversion": 83,
+    "note": 4.2,
+    "demande": 85,
+    "estimation": "100 000–200 000 FCFA / mois"
+  },
+
+  {
+    "name": "Dropshipping International",
+    "category": "Dropshipping International",
+    "conversion": 50,
+    "note": 3.5,
+    "demande": 70,
+    "estimation": "⚠️ Instable — dépend totalement des pubs"
+  }
+]
