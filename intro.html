@@ -9,17 +9,17 @@
     body {
         margin: 0;
         background: #000;
+        color: #f7d778;
         font-family: Arial, sans-serif;
-        color: #bcdfff;
         overflow: hidden;
         text-align: center;
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
     }
 
+    /* Lignes IA dorées */
     .matrix-bg {
         position: fixed;
         top: 0; left: 0;
@@ -29,97 +29,102 @@
     .line {
         position: absolute;
         width: 2px;
-        background: rgba(0,150,255,0.4);
+        background: rgba(255,215,0,0.35);
+        box-shadow: 0 0 12px gold;
         animation: drop 4s linear infinite;
     }
     @keyframes drop {
-        0% { transform: translateY(-120vh); opacity: 0; }
-        10% { opacity: 1; }
-        100% { transform: translateY(120vh); opacity: 0; }
+        0% { transform: translateY(-150vh); opacity: 0; }
+        15% { opacity: 1; }
+        100% { transform: translateY(150vh); opacity: 0; }
     }
 
+    /* Titre Gold Néon */
     h1 {
         margin-top: 80px;
-        font-size: 34px;
-        color: #4aa8ff;
-        text-shadow: 0 0 15px #4aa8ff, 0 0 30px #008cff;
-        animation: fadeIn 1.5s ease-out;
-    }
-
-    .ia-text {
-        margin-top: 15px;
-        width: 90%;
-        max-width: 650px;
-        font-size: 15px;
-        line-height: 1.5;
-        opacity: 0;
-        animation: fadeIn 2.5s ease-out forwards 0.5s;
+        font-size: 36px;
+        color: #f8e7a1;
+        text-shadow: 0 0 12px gold, 0 0 40px #ffdd55;
+        animation: fadeIn 1.2s ease-out;
     }
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(15px); }
+        from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
     }
 
-    .btn-next {
+    /* Zone du texte IA */
+    #typewriter {
         margin-top: 25px;
-        padding: 14px 35px;
-        font-size: 16px;
-        background: #009dff;
-        color: white;
-        border: none;
+        width: 85%;
+        max-width: 700px;
+        font-size: 15px;
+        line-height: 1.6;
+        text-shadow: 0 0 10px gold;
+        min-height: 180px;
+    }
+
+    /* Bouton Gold Premium */
+    .btn-next {
+        margin-top: 40px;
+        padding: 14px 40px;
+        font-size: 17px;
         border-radius: 10px;
+        border: none;
+        background: linear-gradient(90deg, #e6c15e, #f9e7a3, #e6c15e);
+        color: #000;
+        font-weight: bold;
+        box-shadow: 0 0 25px gold;
         cursor: pointer;
-        box-shadow: 0 0 18px #009dff;
-        transition: 0.25s;
+        transition: 0.3s;
     }
     .btn-next:hover {
         transform: scale(1.08);
-        box-shadow: 0 0 30px #00c3ff;
+        box-shadow: 0 0 40px gold;
     }
 </style>
 </head>
 <body>
 
+<!-- FOND IA -->
 <div class="matrix-bg"></div>
 <script>
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 25; i++) {
         let line = document.createElement("div");
         line.className = "line";
         line.style.left = Math.random() * 100 + "%";
-        line.style.height = (100 + Math.random()*40) + "vh";
+        line.style.height = (120 + Math.random()*60) + "vh";
         line.style.animationDelay = (Math.random()*5) + "s";
         document.body.appendChild(line);
     }
 </script>
 
-<!-- AUDIO AUTOPLAY (compatible iPhone) -->
-<audio id="introAudio" autoplay muted>
-  <source src="intro.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-    // Trick pour iPhone : démarrer muted puis activer le son après 0.5s
-    setTimeout(() => {
-        const audio = document.getElementById("introAudio");
-        audio.muted = false;
-        audio.play().catch(() => {});
-    }, 500);
-</script>
-
 <h1>Bienvenue dans GROOM™</h1>
 
-<p class="ia-text">
-Initialisation du système GROOM™…<br>
-Analyse Élít CSP en cours…<br>
-Modules comportementaux synchronisés…<br><br>
+<!-- TEXTE QUI S'ÉCRIT LETTRE PAR LETTRE -->
+<div id="typewriter"></div>
 
-Votre interface est prête.<br><br>
+<script>
+    const text = 
+`Initialisation du système GROOM™...
+Analyse Élít CSP en cours...
+Modules comportementaux synchronisés...
 
-Vous êtes sur le point d’accéder à GROOM : un écosystème intelligent capable d’analyser vos idées, détecter les meilleures opportunités et tracer la voie la plus rentable selon votre profil.<br><br>
+Votre interface GROOM™ est active.
 
-Appuyez sur SUIVANT pour continuer.
-</p>
+Préparez-vous. Vous allez accéder à un écosystème intelligent capable d'analyser vos idées, détecter vos meilleures opportunités et tracer la voie la plus rentable selon votre profil.`
+
+    let index = 0;
+    const speed = 22;
+    function typeEffect() {
+        if(index < text.length){
+            document.getElementById("typewriter").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, speed);
+        }
+    }
+    typeEffect();
+</script>
 
 <button class="btn-next" onclick="window.location.href='page3.html'">SUIVANT →</button>
 
