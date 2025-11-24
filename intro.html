@@ -13,9 +13,13 @@
         color: #bcdfff;
         overflow: hidden;
         text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    /* Background lignes IA */
     .matrix-bg {
         position: fixed;
         top: 0; left: 0;
@@ -34,60 +38,52 @@
         100% { transform: translateY(120vh); opacity: 0; }
     }
 
-    /* Titre */
     h1 {
-        margin-top: 160px;
-        font-size: 50px;
+        margin-top: 80px;
+        font-size: 34px;
         color: #4aa8ff;
-        text-shadow: 0 0 25px #4aa8ff, 0 0 45px #008cff;
-        animation: fadeIn 2s ease-out;
+        text-shadow: 0 0 15px #4aa8ff, 0 0 30px #008cff;
+        animation: fadeIn 1.5s ease-out;
     }
 
-    /* Texte IA */
     .ia-text {
-        margin: 30px auto;
-        width: 85%;
-        max-width: 700px;
-        font-size: 16px;
+        margin-top: 15px;
+        width: 90%;
+        max-width: 650px;
+        font-size: 15px;
+        line-height: 1.5;
         opacity: 0;
-        animation: fadeIn 3s ease-out forwards 1.5s;
+        animation: fadeIn 2.5s ease-out forwards 0.5s;
     }
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
+        from { opacity: 0; transform: translateY(15px); }
         to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Bouton suivant */
     .btn-next {
-        margin-top: 60px;
-        padding: 15px 40px;
-        font-size: 18px;
+        margin-top: 25px;
+        padding: 14px 35px;
+        font-size: 16px;
         background: #009dff;
         color: white;
         border: none;
-        border-radius: 8px;
+        border-radius: 10px;
         cursor: pointer;
         box-shadow: 0 0 18px #009dff;
-        transition: 0.3s;
+        transition: 0.25s;
     }
     .btn-next:hover {
-        transform: scale(1.1);
+        transform: scale(1.08);
         box-shadow: 0 0 30px #00c3ff;
     }
 </style>
 </head>
 <body>
 
-<!-- AUDIO AUTOMATIQUE -->
-<audio autoplay>
-  <source src="ElevenLabs_2025-11-24T12_36_39_Brian_pre_sp100_ss0_sb75_se0_b_m2.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Background IA -->
 <div class="matrix-bg"></div>
 <script>
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 18; i++) {
         let line = document.createElement("div");
         line.className = "line";
         line.style.left = Math.random() * 100 + "%";
@@ -97,14 +93,31 @@
     }
 </script>
 
+<!-- AUDIO AUTOPLAY (compatible iPhone) -->
+<audio id="introAudio" autoplay muted>
+  <source src="intro.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // Trick pour iPhone : démarrer muted puis activer le son après 0.5s
+    setTimeout(() => {
+        const audio = document.getElementById("introAudio");
+        audio.muted = false;
+        audio.play().catch(() => {});
+    }, 500);
+</script>
+
 <h1>Bienvenue dans GROOM™</h1>
 
 <p class="ia-text">
-Initialisation du système GROOM…<br>
+Initialisation du système GROOM™…<br>
 Analyse Élít CSP en cours…<br>
-Chargement des modules d’observation comportementale…<br>
-Synchronisation avec l’écosystème GOOM™…<br><br>
-Votre interface IA est prête. Vous allez maintenant accéder à l’environnement intelligent conçu pour analyser, guider et transformer vos idées en business réels.<br><br>
+Modules comportementaux synchronisés…<br><br>
+
+Votre interface est prête.<br><br>
+
+Vous êtes sur le point d’accéder à GROOM : un écosystème intelligent capable d’analyser vos idées, détecter les meilleures opportunités et tracer la voie la plus rentable selon votre profil.<br><br>
+
 Appuyez sur SUIVANT pour continuer.
 </p>
 
