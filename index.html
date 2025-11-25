@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GROOM — IA Business Engine</title>
+
+<style>
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 50% 20%, #012a42, #000);
+    font-family: 'Arial', sans-serif;
+    color: #cce4ff;
+    overflow-x: hidden;
+}
+
+/* LIGNES LUMINEUSES IA */
+.matrix {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.line {
+    position: absolute;
+    width: 2px;
+    height: 110vh;
+    background: rgba(0,170,255,0.55);
+    filter: blur(1px);
+    animation: drop 4s linear infinite;
+}
+@keyframes drop {
+    0% { transform: translateY(-120vh); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(120vh); opacity: 0; }
+}
+
+/* HERO */
+.hero {
+    padding: 130px 20px 70px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 55px;
+    color: #4dc4ff;
+    text-shadow: 0 0 18px #008cff, 0 0 40px #00aaff;
+    font-weight: bold;
+}
+.hero h2 {
+    margin-top: -10px;
+    font-size: 17px;
+    color: #9bd5ff;
+}
+.hero p {
+    max-width: 500px;
+    margin: 18px auto;
+    opacity: 0.85;
+    font-size: 15px;
+}
+
+/* BOUTON */
+.btn {
+    background: linear-gradient(90deg,#009dff,#00c8ff);
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 20px #00aaff;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #00d0ff;
+}
+
+/* SECTION */
+.section {
+    padding: 95px 20px 40px;
+    text-align: center;
+}
+.section h3 {
+    color: #4dc4ff;
+    font-size: 28px;
+    text-shadow: 0 0 15px #0095ff;
+}
+.section p {
+    max-width: 650px;
+    margin: auto;
+    opacity: 0.85;
+}
+
+/* MODULES */
+.modules {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 45px;
+}
+@media(min-width: 750px){
+    .modules { grid-template-columns: repeat(3,1fr); }
+}
+.card {
+    background: rgba(0,35,70,0.45);
+    border: 1px solid rgba(0,165,255,0.3);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,150,255,0.2);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00caff;
+    box-shadow: 0 0 40px rgba(0,200,255,0.45);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 110px 20px;
+}
+.cta button {
+    background: linear-gradient(90deg,#008cff,#00baff);
+    font-size: 20px;
+    padding: 17px 55px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 20px #0098ff;
+    transition: 0.3s;
+}
+.cta button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #00c9ff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND IA -->
+<div class="matrix">
+<script>
+for(let i=0;i<22;i++){
+    let l=document.createElement('div');
+    l.className='line';
+    l.style.left=Math.random()*100+'%';
+    l.style.animationDelay=(Math.random()*4)+'s';
+    document.body.appendChild(l);
+}
+</script>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>GROOM ÉLITE IA</h1>
+    <h2>BUSINESS ENGINE</h2>
+    <p>Le premier écosystème IA conçu pour analyser, guider et transformer ton idée en business réel.</p>
+    <button class="btn" onclick="window.location.href='intro.html'">ENTRER DANS GROOM →</button>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+    <h3>GROOM™ — L’ÉCOSYSTÈME IA</h3>
+    <p>Un système intelligent qui te propose des business, analyse ton potentiel, t'accompagne étape par étape et t’aide à lancer ton projet.</p>
+</div>
+
+<!-- MODULES -->
+<div class="section">
+    <h3>Les Modules IA</h3>
+
+    <div class="modules">
+        <div class="card">
+            <h4>GROOM Business Center™</h4>
+            <p>Accède à des business adaptés à ton pays, ton budget et ton niveau.</p>
+        </div>
+
+        <div class="card">
+            <h4>Analyse Élít CSP GROOM™</h4>
+            <p>Ton score de réussite, ton marché, ta compétition… analysés par IA.</p>
+        </div>
+
+        <div class="card">
+            <h4>GROOM Academy™</h4>
+            <p>Tutoriels rapides, méthodes simples, accompagnement direct.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+    <button onclick="window.location.href='intro.html'">COMMENCER →</button>
+</div>
+
+</body>
+</html>
